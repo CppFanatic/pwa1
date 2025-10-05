@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA1 - Welcome</title>
+    <meta name="description" content="A simple Progressive Web App">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to PWA1</h1>
+            <p class="subtitle">Your Progressive Web App</p>
+        </header>
+        
+        <main>
+            <div class="greeting-card">
+                <h2>Hello, World! 👋</h2>
+                <p>This is a simple Progressive Web App that can be installed on your device.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <span class="icon">📱</span>
+                        <h3>Installable</h3>
+                        <p>Add to home screen</p>
+                    </div>
+                    <div class="feature">
+                        <span class="icon">⚡</span>
+                        <h3>Fast</h3>
+                        <p>Service worker caching</p>
+                    </div>
+                    <div class="feature">
+                        <span class="icon">🌐</span>
+                        <h3>Offline</h3>
+                        <p>Works without internet</p>
+                    </div>
+                </div>
+                
+                <button id="installBtn" class="install-btn" style="display: none;">
+                    Install App
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 PWA1. Built with ❤️</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

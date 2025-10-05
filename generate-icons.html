@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <h2>Icon Generator for PWA1</h2>
+    <p>Open this file in a browser and right-click on each canvas to save as PNG:</p>
+    
+    <h3>192x192 Icon:</h3>
+    <canvas id="canvas192" width="192" height="192" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    
+    <h3>512x512 Icon:</h3>
+    <canvas id="canvas512" width="512" height="512" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        // Create 192x192 icon
+        const canvas192 = document.getElementById('canvas192');
+        const ctx192 = canvas192.getContext('2d');
+        
+        // Background gradient
+        const gradient192 = ctx192.createLinearGradient(0, 0, 192, 192);
+        gradient192.addColorStop(0, '#667eea');
+        gradient192.addColorStop(1, '#764ba2');
+        
+        ctx192.fillStyle = gradient192;
+        ctx192.fillRect(0, 0, 192, 192);
+        
+        // Add text
+        ctx192.fillStyle = 'white';
+        ctx192.font = 'bold 48px Arial';
+        ctx192.textAlign = 'center';
+        ctx192.textBaseline = 'middle';
+        ctx192.fillText('PWA1', 96, 96);
+        
+        // Create 512x512 icon
+        const canvas512 = document.getElementById('canvas512');
+        const ctx512 = canvas512.getContext('2d');
+        
+        // Background gradient
+        const gradient512 = ctx512.createLinearGradient(0, 0, 512, 512);
+        gradient512.addColorStop(0, '#667eea');
+        gradient512.addColorStop(1, '#764ba2');
+        
+        ctx512.fillStyle = gradient512;
+        ctx512.fillRect(0, 0, 512, 512);
+        
+        // Add text
+        ctx512.fillStyle = 'white';
+        ctx512.font = 'bold 128px Arial';
+        ctx512.textAlign = 'center';
+        ctx512.textBaseline = 'middle';
+        ctx512.fillText('PWA1', 256, 256);
+        
+        // Add download buttons
+        function downloadIcon(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Add download buttons
+        const download192 = document.createElement('button');
+        download192.textContent = 'Download 192x192 Icon';
+        download192.onclick = () => downloadIcon(canvas192, 'icon-192.png');
+        canvas192.parentNode.appendChild(download192);
+        
+        const download512 = document.createElement('button');
+        download512.textContent = 'Download 512x512 Icon';
+        download512.onclick = () => downloadIcon(canvas512, 'icon-512.png');
+        canvas512.parentNode.appendChild(download512);
+    </script>
+</body>
+</html>
