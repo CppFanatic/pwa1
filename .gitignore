@@ -12,6 +12,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+*.code-workspace
 
 # Logs
 *.log
@@ -41,3 +42,11 @@ pids
 # Temporary files
 *.tmp
 *.temp
+
+# PWA specific
+sw.js.map
+*.map
+
+# Icon generation files (optional - you can keep these if you want)
+create-icons.html
+generate-icons.html
